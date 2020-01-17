@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+/* jshint esversion: 6 */
+import React, { useState, useEffect }  from 'react';
+import ReactDOM from "react-dom";
+import axios from "axios";
 import './App.css';
 
-function App() {
+import PlayerCard from './components/PlayerCard.js';
+import PlayerList from './components/PlayerList.js';
+import Navbar from "./components/NavBar.js";
+
+const  App = () =>  {
+//
+//   const [playerData, setPlayerData] = useState([]);
+//
+// useEffect(() => {
+//   axios
+//     .get(
+//       "http://localhost:5000/api/players"
+//     )
+//     .then(res =>setPlayerData(res.data))
+//           .catch(err => console.log(err));
+//       }, []);
+// console.log(playerData);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar />
+    <PlayerList />
+
+
     </div>
   );
 }
