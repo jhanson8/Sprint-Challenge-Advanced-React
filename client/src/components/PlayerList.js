@@ -37,8 +37,8 @@ const PlayerList = props => {
 
       <div className="player-card">
     <h1> {player.name} </h1>
-    <p> Searches: {player.searches} </p>
-    <p>{player.country}</p>
+    <h3> Searches: {player.searches} </h3>
+    <h3>{player.country}</h3>
       </div>
 
     );
